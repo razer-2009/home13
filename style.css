@@ -1,0 +1,67 @@
+.firstchildtest, .lastchildtest, .evenchildtest, .oddchildtest, .nthchildtest{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 300px;
+    width: 100%;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+}
+
+/** 
+http://htmlbook.ru/css/first-child
+http://htmlbook.ru/css/last-child
+http://htmlbook.ru/css/nth-child
+**/
+
+
+.firstchildtest .square{
+    background-color: yellow;
+}
+
+.firstchildtest .square:first-child{
+   background-color: purple;
+}
+
+.lastchildtest .square{
+    background-color: red;
+}
+
+.lastchildtest .square:last-child{
+background-color: seagreen;
+}
+
+.evenchildtest .square{
+   background-color: orangered;
+}
+
+/**  even означает чётные **/
+.evenchildtest .square:nth-child(even){
+background-color: royalblue;
+}
+
+.oddchildtest .square{
+    background-color: orangered;
+ }
+ 
+ /**  odd означает нечётные **/
+ .oddchildtest .square:nth-child(odd){
+    background-color: royalblue;
+ }
+
+.nthchildtest .square{
+    background-color: turquoise;
+ }
+
+ /**  В nth-child можно записать выражение. 3n обратится к каждому третьему элементу**/
+ .nthchildtest .square:nth-child(3n){ 
+    background-color: olive;
+ }
